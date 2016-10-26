@@ -1,0 +1,52 @@
+{BOARD_INDEX}
+
+<div class="breadcrumbs">
+  <p class="nomargin path" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <a class="nav" href="{U_INDEX}" itemprop="url"><span itemprop="title">{L_INDEX}</span></a>
+    {NAV_CAT_DESC}
+  </p>
+</div>
+<div class="pagination">
+ {PAGINATION} 
+</div>
+
+<div class="topic-actions">
+<!-- BEGIN switch_user_authpost -->
+	<div class="buttons">
+		<div class="post-icon  "><a title="أضف اعلان في هذا القسم" href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow"><img src="{POST_IMG}" class="{POST_IMG_ID}" alt="{L_POST_NEW_TOPIC}" /></a></div>
+	</div>
+<!-- END switch_user_authpost -->
+ 
+</div>
+ 
+
+{TOPICS_LIST_BOX}
+
+<div class="topic-actions">
+ 
+
+	<div class="pagination">
+		{PAGINATION}<br />
+ 
+	</div>
+</div>
+
+<div class="clear"></div>
+<form action="{S_JUMPBOX_ACTION}" method="get" name="jumpbox" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+	<fieldset class="vf_jumpbox right">
+		<label>{L_JUMP_TO}:&nbsp;</label>
+		{S_JUMPBOX_SELECT}&nbsp;
+		<input class="button2" type="submit" value="{L_GO}" />
+	</fieldset>
+</form>
+
+ 
+
+<div id="info_open" style="display:block;clear:both">
+<div class="h3">المشرفين</div>
+<p>{MODERATORS}</p>
+
+<div class="h3">صلاحيات القسم</div>
+<p>{S_AUTH_LIST}</p>
+
+</div> 

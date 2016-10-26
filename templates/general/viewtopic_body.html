@@ -1,0 +1,239 @@
+<style>.module_inner {display: none;}</style>
+<h1 class="page-title">
+	<a href="{TOPIC_URL}">{TOPIC_TITLE}</a>
+</h1>
+
+<div class="topic-actions">
+
+
+	<div class="breadcrumbs">
+		<p itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a class="nav" href="{U_INDEX}" itemprop="url"><span itemprop="title">{L_INDEX}</span></a>
+            <!--{NAV_SEP}<a class="nav" href="{U_ALBUM}" itemprop="url"><span itemprop="title">{L_ALBUM}</span></a>-->
+            {NAV_CAT_DESC}
+        </p>
+	</div>
+ 
+	<div class="buttons">
+  
+ 
+	</div>
+ 
+	<div class="clear"></div>
+</div>
+
+<!-- BEGIN topicpagination -->
+<p class="pagination">{PAGINATION}</p>
+<!-- END topicpagination -->
+ 
+<div class="clear"></div>
+{POLL_DISPLAY}
+ 
+
+      <aside style="top: 0px;" class="sticky">
+        	<div class="  share-ads">
+
+		<ul class="btn-share clearfix">
+
+<li><a title="شارك" href="#" class="button share fa fa-share-alt"></a></li>
+<li><script >document.write('<a class="button twitter fa fa-twitter share-btn" href="https://twitter.com/intent/tweet?hashtags=koutstore&original_referer=http://' + window.location.host + '{TOPIC_URL}&ref_src=twsrc%5Etfw&text={TOPIC_TITLE}&tw_p=tweetbutton&url=http://' + window.location.host + '{TOPIC_URL}&via=koutstore"></a>');</script></li>
+<li><script>document.write('<a class="button facebook fa fa-facebook share-btn" href="http://www.facebook.com/share.php?u=' + window.location.host + '{TOPIC_URL}"></a>');</script></li>
+<li><script>document.write('<a class="button google fa fa-google-plus share-btn" href="https://plus.google.com/share?url=' + window.location.host + '{TOPIC_URL}"></a>');</script></li>
+
+		</ul>
+
+		</div>
+                                  <div id="solve-button" class="left"></div>
+                                  <div class=" ">
+                      <a class="btn1 btn-default" id="favorite" title="اضافة للمفضلة الخاصة بك" href="search?add_favourite={TOPIC_ID}&search_id=favouritesearch">
+                                  <i class="fa fa-star fa-2x " aria-hidden="true"></i>
+                                  </a>
+      
+                              </div>
+                              <div class="noprint">
+ <!-- BEGIN switch_user_logged_in -->
+<!-- BEGIN watchtopic -->
+<div class="right watch-topic">{S_WATCH_TOPIC}</div>
+<!-- END watchtopic -->
+<div class="clear"></div>
+ <!-- END switch_user_logged_in -->
+</div>
+ 
+</aside>
+ 
+ 			<div class="topic-container">
+
+<!-- BEGIN postrow -->
+	<!-- BEGIN hidden -->
+		<div class="content-block post {postrow.hidden.ROW_COUNT}">
+			<div class="post-inner">
+				<p style="text-align:center">{postrow.hidden.MESSAGE}</p>
+				<div class="clear"></div>
+			</div>
+		</div>
+	<!-- END hidden -->
+	<!-- BEGIN displayed -->
+		<div id="p{postrow.displayed.U_POST_ID}" class="content-block post {postrow.displayed.ROW_COUNT}{postrow.displayed.ONLINE_IMG_NEW} post--{postrow.displayed.U_POST_ID}"{postrow.displayed.THANK_BGCOLOR} style="{postrow.displayed.DISPLAYABLE_STATE}">
+      <div style="position: relative; top: -30px; width: 1px;" id="{postrow.displayed.U_POST_ID}"></div>
+
+      <div class="user-title">
+        <h2 class="topic-title">{postrow.displayed.ICON} <a href="{postrow.displayed.POST_URL}">{postrow.displayed.POST_SUBJECT}</a></h2>
+       </div>
+    <div class="post-inner">
+			<div class="postprofile" id="profile{postrow.displayed.U_POST_ID}">
+				<dl>
+					<dt>
+						<div class="user-avatar">{postrow.displayed.POSTER_AVATAR}</div>
+						<strong class="username">{postrow.displayed.POSTER_NAME}</strong>
+            <div class="rank-title">{postrow.displayed.POSTER_RANK_NEW}{postrow.displayed.RANK_IMAGE}</div>
+					</dt>
+
+					<dd class="field-info">
+						<!-- BEGIN profile_field -->
+						<span class="profile-field">{postrow.displayed.profile_field.LABEL} <span class="value">{postrow.displayed.profile_field.CONTENT}</span>{postrow.displayed.profile_field.SEPARATOR}</span>
+						<!-- END profile_field -->
+						{postrow.displayed.POSTER_RPG}
+					</dd>
+
+					<dd class="contact-info">
+						{postrow.displayed.PROFILE_IMG} {postrow.displayed.PM_IMG} {postrow.displayed.EMAIL_IMG}<!-- BEGIN contact_field --> {postrow.displayed.contact_field.CONTENT}<!-- END contact_field -->
+					</dd>
+				</dl>
+			</div>
+
+			<div class="postbody">
+        <p class="author"><i class="fa fa-clock-o" aria-hidden="true"></i> {postrow.displayed.POST_DATE_NEW}</p>
+
+				<ul class="profile-icons">
+				<!-- BEGIN switch_vote_active -->
+				<li class="vote gensmall">
+					<!-- BEGIN switch_vote -->
+					<a class="fa vote-button-plus" href="{postrow.displayed.switch_vote_active.switch_vote.U_VOTE_PLUS}">&#61796;</a>
+					<!-- END switch_vote -->
+
+					<!-- BEGIN switch_bar -->
+					<span class="vote-bar" title="{postrow.displayed.switch_vote_active.L_VOTE_TITLE}">
+						<!-- BEGIN switch_vote_plus -->
+						<span class="vote-bar-plus" style="width:{postrow.displayed.switch_vote_active.switch_bar.switch_vote_plus.HEIGHT_PLUS}px;"></span>
+						<!-- END switch_vote_plus -->
+
+						<!-- BEGIN switch_vote_minus -->
+						<span class="vote-bar-minus" style="width:{postrow.displayed.switch_vote_active.switch_bar.switch_vote_minus.HEIGHT_MINUS}px;"></span>
+						<!-- END switch_vote_minus -->
+					</span>
+					<!-- END switch_bar -->
+
+					<!-- BEGIN switch_no_bar -->
+					<span title="{postrow.displayed.switch_vote_active.L_VOTE_TITLE}" class="vote-no-bar"></span>
+					<!-- END switch_no_bar -->
+
+					<!-- BEGIN switch_vote -->
+					<a class="fa vote-button-minus" href="{postrow.displayed.switch_vote_active.switch_vote.U_VOTE_MINUS}">&#61797;</a>
+					<!-- END switch_vote -->
+				</li>
+				<!-- END switch_vote_active -->
+					<li >{postrow.displayed.THANK_IMG}</li>
+					<li>{postrow.displayed.MULTIQUOTE_IMG}</li>
+					<li>{postrow.displayed.QUOTE_IMG}</li>
+					<li>{postrow.displayed.EDIT_IMG}</li>
+					<li>{postrow.displayed.DELETE_IMG}</li>
+					<li>{postrow.displayed.IP_IMG}</li>
+					<li>{postrow.displayed.REPORT_IMG_NEW}</li>
+				</ul>
+
+				<div class="content">
+					<div>{postrow.displayed.MESSAGE}</div>
+						<!-- BEGIN switch_attachments -->
+						<dl class="attachbox">
+							<dt>{postrow.displayed.switch_attachments.L_ATTACHMENTS}</dt>
+							<dd class="attachments">
+								<!-- BEGIN switch_post_attachments -->
+								<dl class="file clearfix">
+									<dt>
+										<img src="{postrow.displayed.switch_attachments.switch_post_attachments.U_IMG}" alt=""/>
+									</dt>
+									<dd>
+										<!-- BEGIN switch_dl_att -->
+										<span><a class="postlink" href="{postrow.displayed.switch_attachments.switch_post_attachments.switch_dl_att.U_ATTACHMENT}">{postrow.displayed.switch_attachments.switch_post_attachments.switch_dl_att.ATTACHMENT}</a> {postrow.displayed.switch_attachments.switch_post_attachments.switch_dl_att.ATTACHMENT_DEL}</span>
+										<!-- END switch_dl_att -->
+
+										<!-- BEGIN switch_no_dl_att -->
+										<span>{postrow.displayed.switch_attachments.switch_post_attachments.switch_no_dl_att.ATTACHMENT} {postrow.displayed.switch_attachments.switch_post_attachments.switch_no_dl_att.ATTACHMENT_DEL}</span>
+										<!-- END switch_no_dl_att -->
+
+										<!-- BEGIN switch_no_comment -->
+										<span>{postrow.displayed.switch_attachments.switch_post_attachments.switch_no_comment.ATTACHMENT_COMMENT}</span>
+										<!-- END switch_no_comment -->
+
+										<!-- BEGIN switch_no_dl_att -->
+										<span><strong>{postrow.displayed.switch_attachments.switch_post_attachments.switch_no_dl_att.TEXT_NO_DL}</strong></span>
+										<!-- END switch_no_dl_att -->
+
+										<span>({postrow.displayed.switch_attachments.switch_post_attachments.FILE_SIZE}) {postrow.displayed.switch_attachments.switch_post_attachments.NB_DL}</span>
+									</dd>
+								</dl>
+								<!-- END switch_post_attachments -->
+							</dd>
+						</dl>
+						<!-- END switch_attachments -->
+				</div>
+				{postrow.displayed.EDITED_MESSAGE}
+				<!-- BEGIN switch_signature -->
+				<div class="signature_div" id="sig{postrow.displayed.U_POST_ID}">{postrow.displayed.SIGNATURE_NEW}</div>
+				<!-- END switch_signature -->
+			</div>
+
+			<div class="clear"></div>
+    </div>
+		</div>
+		<!-- BEGIN first_post_br -->
+		<hr id="first-post-br" />
+		<!-- END first_post_br -->
+	<!-- END displayed -->
+<!-- END postrow -->
+			</div>
+
+<a name="bottomtitle"></a>
+
+<!-- BEGIN topicpagination -->
+<p class="pagination">{PAGINATION}</p>
+<!-- END topicpagination -->
+
+ 
+<div class="clear"></div>
+
+
+ 
+
+<!-- BEGIN switch_user_logged_in -->
+<a name="quickreply"></a>
+{QUICK_REPLY_FORM}
+<!-- END switch_user_logged_in -->
+  
+<div class="topic-actions">
+ 
+ 
+
+	<div class="pagination">
+		{PAGE_NUMBER}
+	</div>
+</div>
+ 
+
+<!-- BEGIN viewtopic_bottom -->
+ 
+<div class="clear"></div>
+<p class="right">{S_TOPIC_ADMIN}</p>
+<!-- END viewtopic_bottom -->
+
+ 
+
+<!-- BEGIN switch_image_resize -->
+<script type="text/javascript">
+//<![CDATA[
+$(resize_images({ 'selector' : '.postbody .content', 'max_width' : {switch_image_resize.IMG_RESIZE_WIDTH}, 'max_height' : {switch_image_resize.IMG_RESIZE_HEIGHT} }));
+//]]>
+</script>
+<!-- END switch_image_resize -->
+
+ 
