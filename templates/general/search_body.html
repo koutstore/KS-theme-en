@@ -79,3 +79,35 @@
 	</div>
 </div>
 </form>
+
+
+		<dl>
+			<dt><label>{L_SEARCH_PREVIOUS}:</label></dt>
+			<dd><select name="search_time">{S_TIME_OPTIONS}</select></dd>
+		</dl>
+		<dl>
+			<dt><label>{L_DISPLAY_RESULTS}:</label></dt>
+			<dd><label for="topics"><input id="topics" type="radio" name="show_results" value="topics" checked="checked" />{L_TOPICS}</label><label for="posts"><input id="posts" type="radio" name="show_results" value="posts" />{L_POSTS}</label></dd>
+		</dl>
+		<dl>
+			<dt><label>{L_SORT_BY}:</label></dt>
+			<dd><select name="sort_by">{S_SORT_OPTIONS}</select></dd>
+			<dd><label for="ASC"><input id="ASC" type="radio" name="sort_dir" value="ASC" />{L_SORT_ASCENDING}</label> <label for="DESC"><input id="DESC" type="radio" name="sort_dir" value="DESC" checked="checked" />{L_SORT_DESCENDING}</label></dd>
+		</dl>
+		</fieldset>
+
+	</div>
+</div>
+
+<div class="content-block">
+	<div class="txt-content">
+
+	<fieldset class="submit-buttons">
+		{S_HIDDEN_FIELDS}
+		<input type="hidden" name="google" value="" />
+		<input class="button1" type="submit" value="{L_SEARCH}" onclick="document.searchform.google.value='';" />
+	</fieldset>
+
+	</div>
+</div>
+</form>
