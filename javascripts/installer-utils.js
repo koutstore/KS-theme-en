@@ -3,7 +3,7 @@
     window.FAE = new Object();
   }
 
-  FAE.raw = 'https://raw.githubusercontent.com/koutstore/KS-theme/master/';
+  FAE.raw = 'https://raw.githubusercontent.com/koutstore/KS-theme-en/master/';
   FAE.eGIF = 'http://illiweb.com/fa/empty.gif';
   FAE.delay = 1000;
   FAE.cp_lang = {};
